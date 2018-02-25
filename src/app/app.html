@@ -1,1 +1,19 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="mymenu">
+  <ion-content>
+    <ion-list>
+      <filters></filters>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mymenu [root]="rootPage"></ion-nav>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      FirmAPI
+    </ion-title>
+  </ion-navbar>
+</ion-header>
