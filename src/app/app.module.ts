@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { FiltersComponent } from '../components/filters/filters';
+import { ExportComponent } from "../components/export/export";
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -15,6 +16,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { FirmApiProvider } from '../providers/firm-api/firm-api';
 import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     DetailCompanyPage,
-    FiltersComponent
+    FiltersComponent,
+    ExportComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailCompanyPage
+    DetailCompanyPage,
+    ExportComponent
   ],
   providers: [
     StatusBar,

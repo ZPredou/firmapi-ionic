@@ -1,0 +1,38 @@
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list-header>
+          <h2>Export de toutes les données :</h2>
+        </ion-list-header>
+          <ion-list>
+            <button ion-item>
+              <ion-icon name="download" item-start></ion-icon>Tout le jeu de données | CSV
+            </button>
+            <button ion-item>
+              <ion-icon name="download" item-start></ion-icon>Tout le jeu de données | Json
+            </button>
+            <button ion-item>
+              <ion-icon name="download" item-start></ion-icon>Tout le jeu de données | XLS
+            </button>
+          </ion-list>
+      </ion-col>
+      <ion-col col-12>
+        <ion-list-header>
+          <h2>Export des données filtrés :</h2>
+        </ion-list-header>
+          <ion-list>
+            <button ion-item>
+              <ion-icon name="download" item-start></ion-icon> {{total}} entreprises | CSV
+            </button>
+            <button ion-item>
+              <ion-icon name="download" item-start></ion-icon>{{total}} entreprises | Json
+            </button>
+            <button ion-item>
+              <ion-icon name="download" item-start></ion-icon>{{total}} entreprises | XLS
+            </button>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
