@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class FiltersComponent {
 
   text: string;
+  nbcompany: string;
 
   constructor() {
     console.log('Hello FiltersComponent Component');

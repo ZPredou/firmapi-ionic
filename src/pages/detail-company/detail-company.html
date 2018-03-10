@@ -1,0 +1,51 @@
+<!--
+  Generated template for the DetailCompanyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{item.fields.l1_declaree}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list inset>
+    <ion-item>
+      <h2>Nom de l'entreprise</h2>
+      <p class="listdetail">{{item.fields.l1_declaree}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Catégorie de l'entreprise</h2>
+      <p class="listdetail">{{item.fields.categorie}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Adresse</h2>
+      <p class="listdetail">{{item.fields.l4_normalisee}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Code postal</h2>
+      <p class="listdetail">{{item.fields.codpos}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>N° Siret</h2>
+      <p class="listdetail">{{item.fields.siret}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Date création</h2>
+      <p class="listdetail">{{item.fields.dcren}} </p>
+    </ion-item>
+    <ion-item>
+      <h2>Coordonnées de l'entreprise</h2>
+      <p class="listdetail">{{item.fields.coordonnees}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Catégorie de l'entreprise</h2>
+      <p class="listdetail">{{item.fields.categorie}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
