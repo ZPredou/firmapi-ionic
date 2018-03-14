@@ -6,7 +6,7 @@
 <ion-content padding>
   <ion-list inset>
     <ion-list-header>
-      Liste des {{ total }} entreprises
+      Nombre d'entreprises :{{ nhits ? ' ' +(nhits |number:'':'fr') + ' ' : ' '}}
     </ion-list-header>
     <ion-item ion-item *ngFor="let item of items" (click)="goToDetailCompany(item)">
       <h2>{{ item.fields.l1_declaree }}</h2>
