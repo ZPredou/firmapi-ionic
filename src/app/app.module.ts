@@ -5,8 +5,8 @@ import { MyApp } from './app.component';
 import { FiltersComponent } from '../components/filters/filters';
 import { ExportComponent } from "../components/export/export";
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { ExportPage } from '../pages/export/export';
+import { MapPage } from '../pages/map/map';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailCompanyPage } from '../pages/detail-company/detail-company';
@@ -25,8 +25,8 @@ registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    ExportPage,
+    MapPage,
     HomePage,
     TabsPage,
     DetailCompanyPage,
@@ -42,8 +42,8 @@ registerLocaleData(localeFr, 'fr');
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    ExportPage,
+    MapPage,
     HomePage,
     TabsPage,
     DetailCompanyPage,
