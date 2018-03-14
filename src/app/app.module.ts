@@ -18,6 +18,7 @@ import { FirmApiProvider } from '../providers/firm-api/firm-api';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { UrlService } from '../providers/url';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -53,7 +54,8 @@ registerLocaleData(localeFr, 'fr');
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirmApiProvider,
-    HttpClientModule
+    HttpClientModule,
+    UrlService
   ]
 })
 export class AppModule {}
