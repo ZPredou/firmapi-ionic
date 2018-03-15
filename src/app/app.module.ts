@@ -10,6 +10,7 @@ import { MapPage } from '../pages/map/map';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailCompanyPage } from '../pages/detail-company/detail-company';
+import { TutorialPage } from "../pages/tutorial/tutorial";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,6 +30,7 @@ registerLocaleData(localeFr, 'fr');
     MapPage,
     HomePage,
     TabsPage,
+    TutorialPage,
     DetailCompanyPage,
     FiltersComponent,
     ExportComponent
@@ -47,7 +49,8 @@ registerLocaleData(localeFr, 'fr');
     HomePage,
     TabsPage,
     DetailCompanyPage,
-    ExportComponent
+    ExportComponent,
+    TutorialPage
   ],
   providers: [
     StatusBar,

@@ -3,4 +3,35 @@ page-map {
     min-width: 100%;
     min-height: 100%;
   }
+  .holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .frame {
+    width: 100%;
+    height: 100%;
+  }
+  .barLeft{
+    position: absolute;
+    top: 50%;
+    left: -12%;
+    width: 20%;
+    border-radius:15000000px;
+    height: 150px;
+    background-color: white;
+    opacity: 0.8;
+    transition: all 0.7s;
+  }
+  .barRight {
+    position: absolute;
+    top: 50%;
+    right: -12%;
+    width: 20%;
+    border-radius: 15000000px;
+    height: 150px;
+    background-color: white;
+    opacity:0.8;
+    transition: all 0.7s;
+  }
 }

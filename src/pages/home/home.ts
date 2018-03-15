@@ -5,6 +5,7 @@ import { FirmApiProvider } from '../../providers/firm-api/firm-api';
 import { CompanyInterface } from '../../providers/firm-api/firm-api-interface';
 import { UrlService } from '../../providers/url';
 import { Subscription } from 'rxjs/Subscription';
+import { TutorialPage } from "../tutorial/tutorial";
 
 @Component({
   selector: 'page-home',
@@ -49,5 +50,9 @@ export class HomePage {
         }
       });
     }, 500);
+  }
+
+  public showTutorial() {
+    this.navCtrl.push(TutorialPage);
   }
 }
