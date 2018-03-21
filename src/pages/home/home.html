@@ -11,7 +11,7 @@
       <ion-list-header>
         Nombre d'entreprises :{{ nhits ? ' ' +(nhits |number:'':'fr') + ' ' : ' '}}
       </ion-list-header>
-    <ion-item ion-item *ngFor="let item of items" (click)="goToDetailCompany(item)">
+    <ion-item ion-item *ngFor="let item of items" (click)="goToDetailCompany(item); vibrate()">
       <h2>{{ item.fields.l1_declaree }}</h2>
       <p class="listdetail">{{item.fields.l4_normalisee}} | {{item.fields.codpos}} </p>
     </ion-item>

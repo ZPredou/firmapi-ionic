@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
 import { MapPage } from '../map/map';
 import { ExportPage } from '../export/export';
 import { HomePage } from '../home/home';
+
 
 @Component({
   templateUrl: 'tabs.html'

@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { UrlService } from '../providers/url';
+import { Vibration } from '@ionic-native/vibration';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -58,7 +59,8 @@ registerLocaleData(localeFr, 'fr');
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirmApiProvider,
     HttpClientModule,
-    UrlService
+    UrlService,
+    Vibration
   ]
 })
 export class AppModule {}

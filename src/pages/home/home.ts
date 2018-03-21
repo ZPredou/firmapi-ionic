@@ -6,6 +6,7 @@ import { CompanyInterface } from '../../providers/firm-api/firm-api-interface';
 import { UrlService } from '../../providers/url';
 import { Subscription } from 'rxjs/Subscription';
 import { TutorialPage } from "../tutorial/tutorial";
+import { Vibration } from '@ionic-native/vibration';
 
 @Component({
   selector: 'page-home',
@@ -17,7 +18,7 @@ export class HomePage {
   nhits: number;
   params = '';
 
-  constructor(public navCtrl: NavController, public firmApiProvider: FirmApiProvider, private sendUrlService: UrlService) {
+  constructor(public navCtrl: NavController, public firmApiProvider: FirmApiProvider, private sendUrlService: UrlService, private vibration: Vibration) {
     this.firmApiProvider.searchCompanies(this.params, 30).subscribe(data => {
       this.nhits = data.nhits;
       for (let i = 0; i < data.records.length; i++) {
@@ -54,5 +55,8 @@ export class HomePage {
 
   public showTutorial() {
     this.navCtrl.push(TutorialPage);
+  }
+  private vibrate(){
+    this.vibration.vibrate([30]);
   }
 }
