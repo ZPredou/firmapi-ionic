@@ -20,7 +20,7 @@ page-map {
     border-radius:15000000px;
     height: 150px;
     background-color: white;
-    opacity: 0.8;
+    opacity: 1;
     transition: all 0.7s;
   }
   .barRight {
@@ -31,7 +31,10 @@ page-map {
     border-radius: 15000000px;
     height: 150px;
     background-color: white;
-    opacity:0.8;
+    opacity:1;
     transition: all 0.7s;
+  }
+  .arrowLeft{
+    top:50%;
   }
 }
