@@ -21,6 +21,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { UrlService } from '../providers/url';
 import { Vibration } from '@ionic-native/vibration';
+import { Network } from '@ionic-native/network';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -60,7 +61,8 @@ registerLocaleData(localeFr, 'fr');
     FirmApiProvider,
     HttpClientModule,
     UrlService,
-    Vibration
+    Vibration,
+    Network
   ]
 })
 export class AppModule {}

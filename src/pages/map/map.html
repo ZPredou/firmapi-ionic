@@ -3,7 +3,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngIf="connected==true && loaded==true">
   <div class="holder">
     <iframe class="frame" frameborder="0" width="100%" height="100%" [src]="mapUrl"></iframe>
     <div class="barLeft"></div>

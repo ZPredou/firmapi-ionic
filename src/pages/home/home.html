@@ -3,7 +3,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngIf="connected==true">
   <button ion-button float-right (click)="showTutorial()">
     <ion-icon name="information"></ion-icon>
   </button>
