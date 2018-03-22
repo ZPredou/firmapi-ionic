@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { DetailCompanyPage } from '../detail-company/detail-company';
 import { FirmApiProvider } from '../../providers/firm-api/firm-api';
@@ -24,8 +24,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public firmApiProvider: FirmApiProvider, private sendUrlService: UrlService, private vibration: Vibration, private loader: LoadingController, private network: Network, private alertCtrl: AlertController) {
     this.loaded=false;
-  }
-  ionViewWillEnter() {
     this.isConnected();
 
     if(this.connected == true){
@@ -61,6 +59,9 @@ export class HomePage {
 
       alert.present();
     }
+  }
+  ionViewWillEnter() {
+    this.vibrate();
   }
   public goToDetailCompany(item) {
     this.navCtrl.push(DetailCompanyPage, {item: item});

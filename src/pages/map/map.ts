@@ -4,6 +4,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { UrlService } from '../../providers/url';
 import { Network } from '@ionic-native/network';
 import { AlertController } from 'ionic-angular';
+import { Vibration } from '@ionic-native/vibration';
 
 @Component({
   selector: 'page-map',
@@ -16,11 +17,14 @@ export class MapPage {
   connected: boolean = navigator.onLine;
   loaded;
 
-  constructor(private sendUrlService: UrlService, private sanitizer: DomSanitizer, private network: Network, private alertCtrl: AlertController) {
+  constructor(private sendUrlService: UrlService, private sanitizer: DomSanitizer, private network: Network, private alertCtrl: AlertController, private vibration: Vibration) {
     this.connected=true;
     this.loaded=false;
     }
     ionViewWillEnter(){
+      this.vibration.vibrate([30]);
+    }
+    ionViewWillLoad(){
       if(this.connected == true){
         this.subscription = this.sendUrlService.getUrl().subscribe(data => {
           this.mapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(

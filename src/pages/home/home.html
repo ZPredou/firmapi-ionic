@@ -4,7 +4,7 @@
 </ion-header>
 
 <ion-content padding *ngIf="connected==true">
-  <button ion-button float-right (click)="showTutorial()">
+  <button ion-button float-right (click)="showTutorial(); vibrate()">
     <ion-icon name="information"></ion-icon>
   </button>
   <ion-list inset>

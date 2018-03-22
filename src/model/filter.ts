@@ -1,4 +1,4 @@
-export class Filters {
+export class AllFilters {
   depet: {
     filter?: Filter[],
     visible?: boolean
@@ -51,8 +51,8 @@ export class Filter {
   dateBefore?: boolean;
 }
 
-export class Constants {
-  public revenues = [
+export class Const {
+  public rev = [
     'Moins de 0.5 million d\'euros',
     'De 0.5 à 1 million d\'euros',
     'De 1 à 2 millions d\'euros',
@@ -64,11 +64,22 @@ export class Constants {
     'De 100 à 200 millions d\'euros',
     '200 millions d\'euros ou plus',
   ];
-
-  effectifs = [
+  categ = [
+    {
+      value: 'PME',
+      libelle: 'Petite ou Moyenne Entreprise'
+    }, {
+      value: 'ETI',
+      libelle: 'Entreprise de Taille Intermédiaire'
+    }, {
+      value: 'GE',
+      libelle: 'Grande Entreprise'
+    },
+  ];
+  effec = [
     {
       value: '00',
-      libelle: '0 salarié'
+      libelle: 'Aucun salarié'
     }, {
       value: '01',
       libelle: '1 ou 2 salariés'
@@ -108,19 +119,6 @@ export class Constants {
     }, {
       value: '53',
       libelle: '10 000 salariés et plus'
-    },
-  ];
-
-  categories = [
-    {
-      value: 'PME',
-      libelle: 'Petite ou Moyenne Entreprise'
-    }, {
-      value: 'ETI',
-      libelle: 'Entreprise de Taille Intermédiaire'
-    }, {
-      value: 'GE',
-      libelle: 'Grande Entreprise'
     },
   ];
 }

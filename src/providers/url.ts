@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import { Filters } from '../model/Filter';
+import { AllFilters } from '../model/Filter';
 
 @Injectable()
 export class UrlService {
@@ -17,7 +17,7 @@ export class UrlService {
     return this.subject.asObservable();
   }
 
-  getUrlParameters(filters: Filters) {
+  getUrlParameters(filters: AllFilters) {
     let urlParameters = '';
     const filterKeys = Object.keys(filters);
     for (let i = 0; i < filterKeys.length; i++) {
